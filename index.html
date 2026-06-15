@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anthony — Software Developer. Building elegant, high-performance applications.">
+  <title>Anthony | Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">A<span>.</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__name">Anthony</h1>
+      <p class="hero__title">Software Developer</p>
+      <p class="hero__tagline">
+        I craft clean, scalable software with precision and style —
+        turning complex problems into elegant solutions.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__avatar">
+        <div class="hero__avatar-ring"></div>
+        <div class="hero__avatar-inner">
+          <span class="hero__initials">A</span>
+        </div>
+      </div>
+      <div class="hero__badge hero__badge--1">React</div>
+      <div class="hero__badge hero__badge--2">Node.js</div>
+      <div class="hero__badge hero__badge--3">TypeScript</div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">About Me</span>
+          <h2 class="section__title">Code with clarity.<br>Ship with confidence.</h2>
+        </div>
+        <div class="about">
+          <div class="about__text">
+            <p>
+              I'm Anthony, a software developer who believes great code should be
+              as refined as it is functional. With a sharp eye for detail and a
+              passion for building products people love, I bridge the gap between
+              design and engineering.
+            </p>
+            <p>
+              From full-stack web applications to API architecture and cloud
+              infrastructure, I focus on writing maintainable code, optimizing
+              performance, and delivering experiences that feel effortless.
+            </p>
+            <ul class="about__stats">
+              <li>
+                <strong>5+</strong>
+                <span>Years Experience</span>
+              </li>
+              <li>
+                <strong>30+</strong>
+                <span>Projects Delivered</span>
+              </li>
+              <li>
+                <strong>100%</strong>
+                <span>Commitment</span>
+              </li>
+            </ul>
+          </div>
+          <div class="about__card">
+            <h3>What I bring to the table</h3>
+            <ul>
+              <li>Full-stack development (React, Node, Python)</li>
+              <li>REST & GraphQL API design</li>
+              <li>Database modeling & optimization</li>
+              <li>CI/CD & cloud deployment (AWS, Vercel)</li>
+              <li>Clean architecture & code reviews</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="skills">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__label">Skills</span>
+          <h2 class="section__title">Technologies I work with</h2>
+        </div>
+        <div class="skills">
+          <div class="skill-card">
+            <div class="skill-card__icon">&#60;/&#62;</div>
+            <h3>Frontend</h3>
+            <p>React, Next.js, TypeScript, Tailwind CSS, HTML/CSS</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">{ }</div>
+            <h3>Backend</h3>
+            <p>Node.js, Python, Express, FastAPI, PostgreSQL, MongoDB</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#9729;</div>
+            <h3>DevOps</h3>
+            <p>Docker, AWS, GitHub Actions, Linux, CI/CD pipelines</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon">&#9881;</div>
+            <h3>Tools</h3>
+            <p>Git, VS Code, Figma, Postman, Jest, Agile/Scrum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Projects</span>
+          <h2 class="section__title">Selected work</h2>
+        </div>
+        <div class="projects">
+          <article class="project-card">
+            <div class="project-card__image project-card__image--1">
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__link" aria-label="View Nexus Dashboard">Live Demo</a>
+                <a href="#" class="project-card__link" aria-label="View Nexus Dashboard source">Source</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+              </div>
+              <h3>Nexus Dashboard</h3>
+              <p>Real-time analytics platform with custom charts, role-based access, and WebSocket live updates.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image project-card__image--2">
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__link" aria-label="View Flow API">Live Demo</a>
+                <a href="#" class="project-card__link" aria-label="View Flow API source">Source</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Redis</span>
+              </div>
+              <h3>Flow API</h3>
+              <p>High-performance REST API handling 10k+ req/min with caching, rate limiting, and OpenAPI docs.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image project-card__image--3">
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__link" aria-label="View DevConnect">Live Demo</a>
+                <a href="#" class="project-card__link" aria-label="View DevConnect source">Source</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Prisma</span>
+              </div>
+              <h3>DevConnect</h3>
+              <p>Developer networking app with profiles, messaging, and event discovery — built for speed and UX.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--accent" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__info">
+            <span class="section__label">Contact</span>
+            <h2 class="section__title">Let's build something great.</h2>
+            <p>
+              Open to freelance projects, full-time roles, and interesting collaborations.
+              Drop me a line — I typically respond within 24 hours.
+            </p>
+            <div class="contact__links">
+              <a href="mailto:anthony@example.com" class="contact__link">
+                <span class="contact__link-icon">@</span>
+                anthony@example.com
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <span class="contact__link-icon">GH</span>
+                github.com/anthony
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <span class="contact__link-icon">in</span>
+                linkedin.com/in/anthony
+              </a>
+            </div>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Anthony. Built with precision.</p>
+      <a href="#hero" class="footer__top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
