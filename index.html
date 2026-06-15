@@ -3,8 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anthony — Software Developer. Building elegant, high-performance applications.">
-  <title>Anthony | Software Developer</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary SEO -->
+  <title>Anthony | Software Developer Portfolio</title>
+  <meta name="description" content="Anthony is a software developer specializing in full-stack web apps, APIs, and cloud deployment. View projects, skills, and get in touch.">
+  <meta name="author" content="Anthony">
+  <meta name="keywords" content="Anthony, software developer, full-stack developer, web developer, React, Node.js, TypeScript, portfolio">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://anthony.dev/">
+
+  <!-- Theme & PWA -->
+  <meta name="theme-color" content="#6366f1">
+  <meta name="color-scheme" content="dark">
+  <meta name="application-name" content="Anthony">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Anthony">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anthony Portfolio">
+  <meta property="og:title" content="Anthony | Software Developer Portfolio">
+  <meta property="og:description" content="Full-stack software developer building elegant, high-performance web applications. Explore projects and contact Anthony.">
+  <meta property="og:url" content="https://anthony.dev/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://placehold.co/1200x630/0a0a0f/818cf8/png?text=Anthony+%7C+Software+Developer">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anthony Software Developer Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anthony | Software Developer Portfolio">
+  <meta name="twitter:description" content="Full-stack software developer building elegant, high-performance web applications.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/0a0a0f/818cf8/png?text=Anthony+%7C+Software+Developer">
+  <meta name="twitter:image:alt" content="Anthony Software Developer Portfolio">
+
+  <!-- Icons & Manifest -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="https://placehold.co/32x32/0a0a0f/818cf8/png?text=A" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="https://placehold.co/180x180/0a0a0f/818cf8/png?text=A">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anthony",
+    "url": "https://anthony.dev/",
+    "image": "https://placehold.co/400x400/1e1e2e/818cf8?text=Anthony",
+    "jobTitle": "Software Developer",
+    "description": "Software developer specializing in full-stack web applications, APIs, and cloud infrastructure.",
+    "email": "mailto:anthony@example.com",
+    "sameAs": [
+      "https://github.com/anthony",
+      "https://linkedin.com/in/anthony"
+    ],
+    "knowsAbout": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Python",
+      "API Design",
+      "Cloud Computing"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Anthony Portfolio",
+    "url": "https://anthony.dev/",
+    "description": "Portfolio website of Anthony, a software developer.",
+    "inLanguage": "en-US",
+    "publisher": {
+      "@type": "Person",
+      "name": "Anthony"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Anthony Portfolio",
+    "url": "https://anthony.dev/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires a modern browser with JavaScript enabled",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -13,12 +115,12 @@
 <body>
   <nav class="nav" id="nav">
     <a href="#" class="nav__logo">A<span>.</span></a>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidebar">
       <span></span>
       <span></span>
       <span></span>
     </button>
-    <ul class="nav__links" id="navLinks">
+    <ul class="nav__links nav__links--desktop">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -26,81 +128,121 @@
     </ul>
   </nav>
 
+  <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar__header">
+      <a href="#" class="sidebar__logo">A<span>.</span></a>
+      <button class="sidebar__close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="sidebar__nav">
+      <ul>
+        <li><a href="#about" class="sidebar__link">About</a></li>
+        <li><a href="#skills" class="sidebar__link">Skills</a></li>
+        <li><a href="#projects" class="sidebar__link">Projects</a></li>
+        <li><a href="#contact" class="sidebar__link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__footer">
+      <img src="https://placehold.co/280x120/16161f/818cf8?text=Anthony+Dev" alt="" class="sidebar__banner" width="280" height="120">
+      <p>Software Developer</p>
+    </div>
+  </aside>
+
   <header class="hero" id="hero">
     <div class="hero__bg"></div>
     <div class="hero__content">
-      <p class="hero__greeting">Hello, I'm</p>
-      <h1 class="hero__name">Anthony</h1>
-      <p class="hero__title">Software Developer</p>
-      <p class="hero__tagline">
+      <p class="hero__greeting animate-in" data-animate="fade-up" data-delay="0">Hello, I'm</p>
+      <h1 class="hero__name animate-in" data-animate="fade-up" data-delay="1">Anthony</h1>
+      <p class="hero__title animate-in" data-animate="fade-up" data-delay="2">Software Developer</p>
+      <p class="hero__tagline animate-in" data-animate="fade-up" data-delay="3">
         I craft clean, scalable software with precision and style —
         turning complex problems into elegant solutions.
       </p>
-      <div class="hero__actions">
+      <div class="hero__actions animate-in" data-animate="fade-up" data-delay="4">
         <a href="#projects" class="btn btn--primary">View My Work</a>
         <a href="#contact" class="btn btn--outline">Get In Touch</a>
       </div>
     </div>
-    <div class="hero__visual">
+    <div class="hero__visual animate-in" data-animate="scale-in" data-delay="2">
       <div class="hero__avatar">
         <div class="hero__avatar-ring"></div>
         <div class="hero__avatar-inner">
-          <span class="hero__initials">A</span>
+          <img
+            src="https://placehold.co/400x400/1e1e2e/818cf8?text=Anthony"
+            alt="Anthony — Software Developer"
+            class="hero__photo"
+            width="400"
+            height="400"
+            loading="eager"
+          >
         </div>
       </div>
       <div class="hero__badge hero__badge--1">React</div>
       <div class="hero__badge hero__badge--2">Node.js</div>
       <div class="hero__badge hero__badge--3">TypeScript</div>
     </div>
-    <a href="#about" class="hero__scroll" aria-label="Scroll down">
+    <a href="#about" class="hero__scroll animate-in" data-animate="fade-in" data-delay="6" aria-label="Scroll down">
       <span></span>
     </a>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section" id="about">
       <div class="container">
         <div class="section__header">
-          <span class="section__label">About Me</span>
-          <h2 class="section__title">Code with clarity.<br>Ship with confidence.</h2>
+          <span class="section__label" data-animate="fade-up">About Me</span>
+          <h2 class="section__title" data-animate="fade-up" data-delay="1">Code with clarity.<br>Ship with confidence.</h2>
         </div>
         <div class="about">
-          <div class="about__text">
-            <p>
-              I'm Anthony, a software developer who believes great code should be
-              as refined as it is functional. With a sharp eye for detail and a
-              passion for building products people love, I bridge the gap between
-              design and engineering.
-            </p>
-            <p>
-              From full-stack web applications to API architecture and cloud
-              infrastructure, I focus on writing maintainable code, optimizing
-              performance, and delivering experiences that feel effortless.
-            </p>
-            <ul class="about__stats">
-              <li>
+          <div class="about__image-wrap" data-animate="fade-right">
+            <img
+              src="https://placehold.co/560x640/12121a/6366f1?text=At+Work"
+              alt="Anthony working at his desk"
+              class="about__image"
+              width="560"
+              height="640"
+              loading="lazy"
+            >
+            <div class="about__image-accent"></div>
+          </div>
+          <div class="about__content">
+            <div class="about__text" data-animate="fade-left">
+              <p>
+                I'm Anthony, a software developer who believes great code should be
+                as refined as it is functional. With a sharp eye for detail and a
+                passion for building products people love, I bridge the gap between
+                design and engineering.
+              </p>
+              <p>
+                From full-stack web applications to API architecture and cloud
+                infrastructure, I focus on writing maintainable code, optimizing
+                performance, and delivering experiences that feel effortless.
+              </p>
+            </div>
+            <ul class="about__stats" data-animate="fade-up" data-delay="2">
+              <li data-animate="scale-in" data-delay="0">
                 <strong>5+</strong>
                 <span>Years Experience</span>
               </li>
-              <li>
+              <li data-animate="scale-in" data-delay="1">
                 <strong>30+</strong>
                 <span>Projects Delivered</span>
               </li>
-              <li>
+              <li data-animate="scale-in" data-delay="2">
                 <strong>100%</strong>
                 <span>Commitment</span>
               </li>
             </ul>
-          </div>
-          <div class="about__card">
-            <h3>What I bring to the table</h3>
-            <ul>
-              <li>Full-stack development (React, Node, Python)</li>
-              <li>REST & GraphQL API design</li>
-              <li>Database modeling & optimization</li>
-              <li>CI/CD & cloud deployment (AWS, Vercel)</li>
-              <li>Clean architecture & code reviews</li>
-            </ul>
+            <div class="about__card" data-animate="fade-up" data-delay="3">
+              <h3>What I bring to the table</h3>
+              <ul>
+                <li>Full-stack development (React, Node, Python)</li>
+                <li>REST & GraphQL API design</li>
+                <li>Database modeling & optimization</li>
+                <li>CI/CD & cloud deployment (AWS, Vercel)</li>
+                <li>Clean architecture & code reviews</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -109,27 +251,27 @@
     <section class="section section--dark" id="skills">
       <div class="container">
         <div class="section__header section__header--center">
-          <span class="section__label">Skills</span>
-          <h2 class="section__title">Technologies I work with</h2>
+          <span class="section__label" data-animate="fade-up">Skills</span>
+          <h2 class="section__title" data-animate="fade-up" data-delay="1">Technologies I work with</h2>
         </div>
         <div class="skills">
-          <div class="skill-card">
-            <div class="skill-card__icon">&#60;/&#62;</div>
+          <div class="skill-card" data-animate="fade-up" data-delay="0">
+            <img src="https://placehold.co/64x64/6366f1/ffffff?text=%3C%2F%3E" alt="" class="skill-card__thumb" width="64" height="64">
             <h3>Frontend</h3>
             <p>React, Next.js, TypeScript, Tailwind CSS, HTML/CSS</p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__icon">{ }</div>
+          <div class="skill-card" data-animate="fade-up" data-delay="1">
+            <img src="https://placehold.co/64x64/14b8a6/ffffff?text=%7B%7D" alt="" class="skill-card__thumb" width="64" height="64">
             <h3>Backend</h3>
             <p>Node.js, Python, Express, FastAPI, PostgreSQL, MongoDB</p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__icon">&#9729;</div>
+          <div class="skill-card" data-animate="fade-up" data-delay="2">
+            <img src="https://placehold.co/64x64/a855f7/ffffff?text=Cloud" alt="" class="skill-card__thumb" width="64" height="64">
             <h3>DevOps</h3>
             <p>Docker, AWS, GitHub Actions, Linux, CI/CD pipelines</p>
           </div>
-          <div class="skill-card">
-            <div class="skill-card__icon">&#9881;</div>
+          <div class="skill-card" data-animate="fade-up" data-delay="3">
+            <img src="https://placehold.co/64x64/ec4899/ffffff?text=Tools" alt="" class="skill-card__thumb" width="64" height="64">
             <h3>Tools</h3>
             <p>Git, VS Code, Figma, Postman, Jest, Agile/Scrum</p>
           </div>
@@ -140,12 +282,19 @@
     <section class="section" id="projects">
       <div class="container">
         <div class="section__header">
-          <span class="section__label">Projects</span>
-          <h2 class="section__title">Selected work</h2>
+          <span class="section__label" data-animate="fade-up">Projects</span>
+          <h2 class="section__title" data-animate="fade-up" data-delay="1">Selected work</h2>
         </div>
         <div class="projects">
-          <article class="project-card">
-            <div class="project-card__image project-card__image--1">
+          <article class="project-card" data-animate="fade-up" data-delay="0">
+            <div class="project-card__image">
+              <img
+                src="https://placehold.co/800x500/312e81/ffffff?text=Nexus+Dashboard"
+                alt="Nexus Dashboard project preview"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
               <div class="project-card__overlay">
                 <a href="#" class="project-card__link" aria-label="View Nexus Dashboard">Live Demo</a>
                 <a href="#" class="project-card__link" aria-label="View Nexus Dashboard source">Source</a>
@@ -162,8 +311,15 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-card__image project-card__image--2">
+          <article class="project-card" data-animate="fade-up" data-delay="1">
+            <div class="project-card__image">
+              <img
+                src="https://placehold.co/800x500/134e4a/ffffff?text=Flow+API"
+                alt="Flow API project preview"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
               <div class="project-card__overlay">
                 <a href="#" class="project-card__link" aria-label="View Flow API">Live Demo</a>
                 <a href="#" class="project-card__link" aria-label="View Flow API source">Source</a>
@@ -180,8 +336,15 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-card__image project-card__image--3">
+          <article class="project-card" data-animate="fade-up" data-delay="2">
+            <div class="project-card__image">
+              <img
+                src="https://placehold.co/800x500/581c87/ffffff?text=DevConnect"
+                alt="DevConnect project preview"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
               <div class="project-card__overlay">
                 <a href="#" class="project-card__link" aria-label="View DevConnect">Live Demo</a>
                 <a href="#" class="project-card__link" aria-label="View DevConnect source">Source</a>
@@ -205,28 +368,38 @@
       <div class="container">
         <div class="contact">
           <div class="contact__info">
-            <span class="section__label">Contact</span>
-            <h2 class="section__title">Let's build something great.</h2>
-            <p>
+            <span class="section__label" data-animate="fade-up">Contact</span>
+            <h2 class="section__title" data-animate="fade-up" data-delay="1">Let's build something great.</h2>
+            <p data-animate="fade-up" data-delay="2">
               Open to freelance projects, full-time roles, and interesting collaborations.
               Drop me a line — I typically respond within 24 hours.
             </p>
-            <div class="contact__links">
+            <div class="contact__visual" data-animate="scale-in" data-delay="2">
+              <img
+                src="https://placehold.co/480x320/16161f/818cf8?text=Let's+Connect"
+                alt="Collaboration illustration placeholder"
+                class="contact__image"
+                width="480"
+                height="320"
+                loading="lazy"
+              >
+            </div>
+            <div class="contact__links" data-animate="fade-up" data-delay="3">
               <a href="mailto:anthony@example.com" class="contact__link">
-                <span class="contact__link-icon">@</span>
+                <img src="https://placehold.co/40x40/16161f/818cf8?text=@" alt="" class="contact__link-icon" width="40" height="40">
                 anthony@example.com
               </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact__link">
-                <span class="contact__link-icon">GH</span>
+                <img src="https://placehold.co/40x40/16161f/818cf8?text=GH" alt="" class="contact__link-icon" width="40" height="40">
                 github.com/anthony
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact__link">
-                <span class="contact__link-icon">in</span>
+                <img src="https://placehold.co/40x40/16161f/818cf8?text=in" alt="" class="contact__link-icon" width="40" height="40">
                 linkedin.com/in/anthony
               </a>
             </div>
           </div>
-          <form class="contact__form" id="contactForm">
+          <form class="contact__form" id="contactForm" data-animate="fade-left" data-delay="1">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required placeholder="Your name">
